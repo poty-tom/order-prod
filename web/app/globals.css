@@ -1,0 +1,112 @@
+:root {
+  --bg: #f8fbff;
+  --panel: #ffffff;
+  --primary: #1b5e20;
+  --danger: #b00020;
+  --text: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(27, 94, 32, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(2, 132, 199, 0.08), transparent 25%),
+    var(--bg);
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+
+.header {
+  padding: 14px 20px;
+  background: #0f172a;
+  color: #fff;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.header nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.header a {
+  color: #c7f9cc;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 980px;
+  margin: 20px auto;
+  padding: 0 16px 32px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .grid.products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-top: 8px;
+}
+
+.small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.error {
+  color: var(--danger);
+  font-weight: 700;
+}
